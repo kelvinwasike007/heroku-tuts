@@ -1,3 +1,4 @@
+var nano = require('nano');
 const app = require('express')();
 nano(process.env.COUCHDB_URL || 'http://127.0.0.1:5984').db.create('test2', function(err) {  
     if (err) {
