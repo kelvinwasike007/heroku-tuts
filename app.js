@@ -9,7 +9,7 @@ nano(process.env.COUCHDB_URL || 'http://127.0.0.1:5984').db.create('test2', func
 var PORT = process.env.PORT || 3000;
 
 app.get('', (req, res)=>{
-    res.send('WELCOME TO HEROKU MY NIGA')
+    res.send('WELCOME TO HEROKU MY NIGA'+process.env.COUCHDB_URL || 'http://127.0.0.1:5984')
 })
 
 app.listen(PORT, ()=>{
